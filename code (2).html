@@ -21,119 +21,26 @@
             padding: 60px 20px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
-        .logo {
-            display: block;
-            margin: 0 auto 20px;
-            width: 150px;
-            height: auto;
-        }
-        nav {
-            background-color: #1b5e20;
-            padding: 15px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        nav a {
-            color: white;
-            margin: 0 20px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #e8f5e8;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        section {
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            margin: 20px 0;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .products {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .product {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .product:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-        }
-        .product img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        .product-info {
-            padding: 15px;
-            text-align: center;
-        }
-        .product h3 {
-            margin: 0 0 10px;
-            color: #2e7d32;
-        }
-        .product p {
-            margin: 0 0 15px;
-            font-size: 14px;
-        }
-        button {
-            background: #4caf50;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        button:hover {
-            background: #2e7d32;
-        }
-        #cart {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: white;
-            border-radius: 10px;
-            padding: 15px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            max-width: 300px;
-            display: none;
-        }
-        #cart.show {
-            display: block;
-        }
-        .admin-form {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            max-width: 400px;
-        }
-        .admin-form input, .admin-form textarea {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        footer {
-            background: linear-gradient(135deg, #1b5e20, #2e7d32);
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
+        .logo { display: block; margin: 0 auto 20px; width: 150px; height: auto; }
+        nav { background-color: #1b5e20; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 100; }
+        nav a { color: white; margin: 0 20px; text-decoration: none; font-weight: bold; transition: color 0.3s; }
+        nav a:hover { color: #e8f5e8; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        section { background: rgba(255,255,255,0.9); border-radius:10px; margin:20px 0; padding:20px; box-shadow:0 4px 8px rgba(0,0,0,0.1); }
+        .products { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap:20px; }
+        .product { background:white; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1); overflow:hidden; transition: transform 0.3s, box-shadow 0.3s; }
+        .product:hover { transform: translateY(-5px); box-shadow:0 8px 16px rgba(0,0,0,0.2); }
+        .product img { width:100%; height:200px; object-fit:cover; }
+        .product-info { padding:15px; text-align:center; }
+        .product h3 { margin:0 0 10px; color:#2e7d32; }
+        .product p { margin:0 0 15px; font-size:14px; }
+        button { background:#4caf50; color:white; border:none; padding:10px 15px; border-radius:5px; cursor:pointer; transition: background 0.3s; }
+        button:hover { background:#2e7d32; }
+        #cart { position:fixed; top:20px; right:20px; background:white; border-radius:10px; padding:15px; box-shadow:0 4px 8px rgba(0,0,0,0.2); max-width:300px; display:none; }
+        #cart.show { display:block; }
+        .admin-form { display:flex; flex-direction:column; gap:10px; max-width:400px; }
+        .admin-form input, .admin-form textarea { padding:10px; border:1px solid #ccc; border-radius:5px; }
+        footer { background: linear-gradient(135deg, #1b5e20, #2e7d32); color:white; text-align:center; padding:20px; margin-top:40px; }
     </style>
 </head>
 <body>
@@ -162,14 +69,11 @@
         
         <section id="products">
             <h2>Our Products</h2>
-            <div class="products" id="product-list">
-                <!-- Products will be dynamically loaded here -->
-            </div>
+            <div class="products" id="product-list"></div>
         </section>
         
         <section id="services">
             <h2>Client Services</h2>
-            <p>At Mt. Hamza, we prioritize our clients with top-notch services:</p>
             <ul>
                 <li><strong>Free Shipping:</strong> Orders over 500 MAD ship free within Morocco.</li>
                 <li><strong>Easy Returns:</strong> 30-day return policy for all products.</li>
@@ -191,7 +95,6 @@
         
         <section id="admin">
             <h2>Admin Dashboard</h2>
-            <p>Manage your e-commerce: Add/change products, prices, photos, and link to ads/PayPal.</p>
             <form class="admin-form" id="product-form">
                 <input type="text" id="product-name" placeholder="Product Name" required>
                 <input type="number" id="product-price" placeholder="Price (MAD)" required>
@@ -199,10 +102,6 @@
                 <textarea id="product-desc" placeholder="Description" rows="3"></textarea>
                 <button type="submit">Add Product</button>
             </form>
-            <h3>Manage Ads & Payments</h3>
-            <button onclick="linkFacebook()">Link to Facebook Ads</button>
-            <button onclick="linkPayPal()">Link to PayPal</button>
-            <p><strong>Note:</strong> These are placeholders. For real integration, use APIs (see instructions below).</p>
         </section>
     </div>
     
@@ -216,18 +115,33 @@
     <footer>
         <p>&copy; 2023 Mt. Hamza. All rights reserved.</p>
     </footer>
-    
-    <!-- PASTE TIDIO CODE HERE (e.g., <script src="https://code.tidio.co/XXXXXX.js" async></script>) -->
-    
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/11.27.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.27.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.27.0/firebase-firestore.js"></script>
+
     <script>
-        let products = JSON.parse(localStorage.getItem('products')) || [
-            { name: 'Sports Hoodie', price: 200, desc: 'Comfortable and stylish', img: 'https://via.placeholder.com/250x200?text=Hoodie' },
-            { name: 'Smartphone', price: 2500, desc: 'Latest technology', img: 'https://via.placeholder.com/250x200?text=Smartphone' },
-            { name: 'Laptop', price: 5000, desc: 'Fast and reliable', img: 'https://via.placeholder.com/250x200?text=Laptop' },
-            { name: 'Headphones', price: 300, desc: 'High-quality sound', img: 'https://via.placeholder.com/250x200?text=Headphones' }
-        ];
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyA_qijQ0_o5p7U_MM-OCNISvGXtdR2xc38",
+            authDomain: "mt-hamza-store.firebaseapp.com",
+            projectId: "mt-hamza-store",
+            storageBucket: "mt-hamza-store.firebasestorage.app",
+            messagingSenderId: "950790053387",
+            appId: "1:950790053387:web:e815e4bf18b6de1187f10e",
+            measurementId: "G-KR1VMS4P40"
+        };
+
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        const analytics = firebase.analytics(app);
+        const db = firebase.firestore();
+
+        // Products & Cart
+        let products = JSON.parse(localStorage.getItem('products')) || [];
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        
+
         function loadProducts() {
             const productList = document.getElementById('product-list');
             productList.innerHTML = '';
@@ -248,7 +162,7 @@
             });
             localStorage.setItem('products', JSON.stringify(products));
         }
-        
+
         document.getElementById('product-form').addEventListener('submit', function(e) {
             e.preventDefault();
             const name = document.getElementById('product-name').value;
@@ -260,32 +174,30 @@
             loadProducts();
             this.reset();
         });
-        
+
         function editProduct(index) {
             const product = products[index];
             document.getElementById('product-name').value = product.name;
             document.getElementById('product-price').value = product.price;
             document.getElementById('product-desc').value = product.desc;
-            // For simplicity, photo edit is not handled; in real app, use file input
-            deleteProduct(index); // Remove old, add new via form
+            deleteProduct(index);
         }
-        
+
         function deleteProduct(index) {
             products.splice(index, 1);
             loadProducts();
         }
-        
+
         function addToCart(name, price) {
             cart.push({ name, price });
             localStorage.setItem('cart', JSON.stringify(cart));
             updateCartDisplay();
         }
-        
+
         function updateCartDisplay() {
             const cartCount = document.getElementById('cart-count');
             const cartItems = document.getElementById('cart-items');
             const cartTotal = document.getElementById('cart-total');
-            
             cartCount.textContent = cart.length;
             cartItems.innerHTML = '';
             let total = 0;
@@ -297,79 +209,14 @@
             });
             cartTotal.textContent = total.toFixed(2);
         }
-        
-        function toggleCart() {
-            document.getElementById('cart').classList.toggle('show');
-        }
-        
-        function checkout() {
-            alert('Checkout feature coming soon! Integrate with PayPal.');
-        }
-        
-        function linkFacebook() {
-            window.open('https://adsmanager.facebook.com', '_blank'); // Opens Facebook Ads Manager
-        }
-        
-        function linkPayPal() {
-            window.open('https://www.paypal.com/buttons', '_blank'); // Opens PayPal button creator
-        }
-        
+
+        function toggleCart() { document.getElementById('cart').classList.toggle('show'); }
+        function checkout() { alert('Checkout feature coming soon!'); }
+
         loadProducts();
         updateCartDisplay();
     </script>
-    <!-- Firebase App (Core SDK) -->
-<script src="https://www.gstatic.com/firebasejs/11.27.0/firebase-app.js"></script>
-<!-- Firebase Analytics -->
-<script src="https://www.gstatic.com/firebasejs/11.27.0/firebase-analytics.js"></script>
 
-<script>
-  // كود Firebase الخاص بك
-  const firebaseConfig = {
-    apiKey: "AIzaSyA_qijQ0_o5p7U_MM-OCNISvGXtdR2xc38",
-    authDomain: "mt-hamza-store.firebaseapp.com",
-    projectId: "mt-hamza-store",
-    storageBucket: "mt-hamza-store.firebasestorage.app",
-    messagingSenderId: "950790053387",
-    appId: "1:950790053387:web:e815e4bf18b6de1187f10e",
-    measurementId: "G-KR1VMS4P40"
-  };
-
-  // تهيئة Firebase
-  const app = firebase.initializeApp(firebaseConfig);
-  const analytics = firebase.analytics(app);
-</script>
-
-    <!-- Firebase App (Core SDK) -->
-<script src="https://www.gstatic.com/firebasejs/11.27.0/firebase-app.js"></script>
-<!-- Firebase Analytics -->
-<script src="https://www.gstatic.com/firebasejs/11.27.0/firebase-analytics.js"></script>
-<!-- Firebase Firestore -->
-<script src="https://www.gstatic.com/firebasejs/11.27.0/firebase-firestore.js"></script>
-
-<script>
-  // إعداد Firebase الخاص بك
-  const firebaseConfig = {
-    apiKey: "AIzaSyA_qijQ0_o5p7U_MM-OCNISvGXtdR2xc38",
-    authDomain: "mt-hamza-store.firebaseapp.com",
-    projectId: "mt-hamza-store",
-    storageBucket: "mt-hamza-store.firebasestorage.app",
-    messagingSenderId: "950790053387",
-    appId: "1:950790053387:web:e815e4bf18b6de1187f10e",
-    measurementId: "G-KR1VMS4P40"
-  };
-
-  // تهيئة Firebase
-  const app = firebase.initializeApp(firebaseConfig);
-  const analytics = firebase.analytics(app);
-  const db = firebase.firestore(); // هذا لقاعدة البيانات Firestore
-</script>
-<!-- Firebase Firestore -->
-<script src="https://www.gstatic.com/firebasejs/11.27.0/firebase-firestore.js"></script>
-
-<script>
-  // تهيئة Firestore
-  const db = firebase.firestore();
-</script>
-
-</body>   
+</body>
 </html>
+
