@@ -317,5 +317,27 @@
         loadProducts();
         updateCartDisplay();
     </script>
-</body>
+    <!-- Firebase App (Core SDK) -->
+<script src="https://www.gstatic.com/firebasejs/11.27.0/firebase-app.js"></script>
+<!-- Firebase Analytics -->
+<script src="https://www.gstatic.com/firebasejs/11.27.0/firebase-analytics.js"></script>
+
+<script>
+  // كود Firebase الخاص بك
+  const firebaseConfig = {
+    apiKey: "AIzaSyA_qijQ0_o5p7U_MM-OCNISvGXtdR2xc38",
+    authDomain: "mt-hamza-store.firebaseapp.com",
+    projectId: "mt-hamza-store",
+    storageBucket: "mt-hamza-store.firebasestorage.app",
+    messagingSenderId: "950790053387",
+    appId: "1:950790053387:web:e815e4bf18b6de1187f10e",
+    measurementId: "G-KR1VMS4P40"
+  };
+
+  // تهيئة Firebase
+  const app = firebase.initializeApp(firebaseConfig);
+  const analytics = firebase.analytics(app);
+</script>
+
+</body>   
 </html>
